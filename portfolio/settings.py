@@ -79,9 +79,10 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'portfoliodbnew',
-        'USER':'postgres',
+        'USER':'localhost',
         'PASSWORD':'galantnjx858',
         'POST':'127.0.0.1',
+	'HOST': 'localhost',
         'PORT':'5432',
     }
 }
@@ -135,6 +136,6 @@ MEDIA_URL = '/media/'
 
 
 try:
-    from local_settings import *
+    from .local_settings import *
 except ImportError:
     pass
